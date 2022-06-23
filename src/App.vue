@@ -1,31 +1,34 @@
 <template>
   <div id="app">
     <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/">Home</router-link>
+      <router-link to="/newuser">New User</router-link>
     </nav>
     <router-view/>
   </div>
 </template>
-
 <style lang="scss">
+  @import "@owui/theme-product/theme";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  max-width: 1024px;
+  margin: auto;
 }
-
 nav {
   padding: 30px;
+  margin-bottom: $gutter * 3;
+  border-bottom: 1px solid $neutral-low;
+  display: flex;
+  gap: 16px;
 
   a {
-    font-weight: bold;
-    color: #2c3e50;
+    @extend %Paragraph;
+    color: $primary-base;
+    font-weight: normal;
+    text-decoration: none;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: $mood-good;
+      text-decoration: underline;
     }
   }
 }

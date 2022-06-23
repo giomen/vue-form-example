@@ -1,18 +1,29 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="Home">
+    <CardList/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
+import CardList from '@/components/CardList/CardList.vue'
+import { Action } from 'vuex-class'
+import {ACTIONS} from '@/store/actions'
+import { User } from '@/shared/models/user.model'
 
 @Component({
   components: {
-    HelloWorld
+    CardList
   }
 })
-export default class HomeView extends Vue {}
+export default class HomeView extends Vue {
+  @Action(ACTIONS.GET_ALL_USERS) getAllUsers: () => Promise<User[]>
+
+  created() {
+    this.getAllUsers().then().catch(e => console.log('error: ', e))
+  }
+}
 </script>
+<style lang="scss" scoped>
+@import "@owui/theme-product/theme";
+</style>

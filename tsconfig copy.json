@@ -1,23 +1,25 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "strict": true,
+    "target": "es2015",
+    "module": "es2015",
+    "strict": false,
+    "noImplicitAny": false,
+    "allowJs": true,
     "jsx": "preserve",
+    "importHelpers": true,
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "useDefineForClassFields": true,
-    "strictNullChecks": false,
     "sourceMap": true,
+    "resolveJsonModule": true,
+//    "strictNullChecks": false,
     "baseUrl": ".",
     "types": [
       "webpack-env",
-      "jest"
+      "jest",
+      "dotenv"
     ],
     "paths": {
       "@/*": [
@@ -31,14 +33,8 @@
       "scripthost"
     ]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "files": ["./typings.d.ts"]
 }

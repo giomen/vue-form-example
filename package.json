@@ -5,43 +5,63 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit --watch",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@babel/preset-typescript": "^7.13.0",
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@owui-commons/http": "^3.3.3",
+    "@owui/theme-product": "^16.4.3",
+    "cleave.js": "^1.6.0",
+    "commitizen": "^4.0.3",
     "core-js": "^3.8.3",
+    "cz-conventional-changelog": "^3.1.0",
+    "husky": "^6.0.0",
+    "inversify": "^6.0.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.6.3",
+    "ts-transformer-keys": "^0.4.3",
+    "uuidv4": "^6.2.13",
     "vue": "^2.6.14",
+    "vuex-mock-store": "^0.0.8",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^9.1.2",
     "vue-router": "^3.5.1",
-    "vuex": "^3.6.2"
+    "vuex": "^3.6.2",
+    "vuex-class": "^0.3.2"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.18.2",
+    "@types/cleave.js": "^1.4.6",
     "@types/jest": "^27.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.4.0",
-    "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-typescript": "~5.0.0",
     "@vue/cli-plugin-unit-jest": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "@vue/eslint-config-standard": "^6.1.0",
-    "@vue/eslint-config-typescript": "^9.1.0",
     "@vue/test-utils": "^1.1.3",
     "@vue/vue2-jest": "^27.0.0-alpha.2",
     "babel-jest": "^27.0.6",
+    "babel-plugin-parameter-decorator": "^1.0.16",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-vue": "^8.0.3",
     "jest": "^27.0.5",
-    "sass": "^1.32.7",
+    "node-sass": "^4.14.1",
     "sass-loader": "^12.0.0",
+    "source-map-loader": "^0.2.0",
     "ts-jest": "^27.0.4",
-    "typescript": "~4.5.5",
+    "typescript": "^4.7.4",
     "vue-template-compiler": "^2.6.14"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
